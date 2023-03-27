@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<%- include('./partials/header'); %>
+
+  <body>
+    <%- include('./partials/navbar'); %>
+    <div class="container" style="display: flex; flex-direction: column; align-items: center; justify-content: flex-start; height: 80vh; margin-top: 5vh;">
+      <form method="post" action="/birds/create" style="display: flex; flex-direction: column; align-items: center;">
+        <label for="bird-species" style="font-size: 24px; margin-bottom: 10px;">Species:</label>
+        <select id="bird-species" name="birdSpecies" style="font-size: 20px; margin-bottom: 20px;">
+          <option value=""></option>
+          <option value="pigeon">Pigeon</option>
+          <option value="blueJay">Blue Jay</option>
+          <option value="toucan">Toucan</option>
+          <option value="shoebillStork">Shoebill Stork</option>
+          <option value="smew">Smew</option>
+          <option value="tinySky-tyrant">Tiny Sky-tyrant</option>
+        </select>
+        <label for="bird-nickname" style="font-size: 24px; margin-bottom: 10px;">Nickname:</label>
+        <input type="text" id="bird-nickname" name="birdNickname" style="font-size: 20px; margin-bottom: 20px; max-length: 20;">
+        <label for="bird-status" style="font-size: 24px; margin-bottom: 10px;">Status:</label>
+        <select id="bird-status" name="birdStatus" style="font-size: 20px; margin-bottom: 20px;">
+          <option value=""></option>
+          <option value="active">Active</option>
+          <option value="inactive">Inactive</option>
+        </select>
+        <button type="submit" class="btn btn-primary mt-3" style="font-size: 20px; padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px;">Submit</button>
+      </form>
+    </div>
+
+    <%- include('./partials/scripts'); %>
+  </body>
+</html>
